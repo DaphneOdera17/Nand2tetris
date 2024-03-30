@@ -14,4 +14,7 @@ CHIP Bit {
 
     PARTS:
     //// Replace this comment with your code.
+    /* If sel == 1, out = b */
+    Mux(a=dff, b=in, sel=load, out=res);
+    DFF(in=res, out=out, out=dff);
 }
